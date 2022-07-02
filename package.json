@@ -1,8 +1,30 @@
 {
   "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.21.2"
-  }
+  },
+  "name": "foundations-capstone",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node server/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimbaqueen/dmpt4-foundations-capstone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimbaqueen/dmpt4-foundations-capstone/issues"
+  },
+  "homepage": "https://github.com/kimbaqueen/dmpt4-foundations-capstone#readme"
 }

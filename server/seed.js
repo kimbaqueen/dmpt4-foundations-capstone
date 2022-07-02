@@ -48,6 +48,7 @@ module.exports = {
         ('Staff Engineer', 'Will Larson', 'Software Engineering', 'https://m.media-amazon.com/images/I/41RJt+xmh4L.jpg', 'What if you want to advance your career without becoming an engineering manager? The technical leadership path remains relatively undocumented, hard to navigate, and inconsistent across companies. Staff Engineer is your guide to building your career towards a Staff engineering role, receiving the title, and succeeding within the role.'),
         ('The Managers Path', 'Camille Fournier', 'Leadership', 'https://images-na.ssl-images-amazon.com/images/I/51L%2BF83aDPL._SY291_BO1,204,203,200_QL40_ML2_.jpg', 'From mentoring interns to working with senior staff, you will get actionable advice for approaching various obstacles in your path. This book is ideal whether you’re a New manager, a mentor, or a more experienced leader looking for fresh advice. Pick up this book and learn how to become a better manager and leader in your organization.'),
         ('Managing Humans', 'Michael Lopp', 'Leadership', 'https://images-na.ssl-images-amazon.com/images/I/718q6lQACYL.jpg', 'Whether you are an aspiring manager, a current manager, or just wondering what the heck a manager does all day, there is a story in this book that will speak to you―and help you survive and prosper amid the general craziness of dysfunctional bright people caught up in the chase of riches and power.');
+        
         `).then(() => {
             console.log('DB Seeded!');
             res.sendStatus(200);

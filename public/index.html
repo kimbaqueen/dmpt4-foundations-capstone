@@ -12,12 +12,39 @@
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway&family=Source+Sans+Pro:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
-    <title>Reading List</title>
-
+    <title>Books To Read</title>
+    <link rel="icon" type="image" href="./bookList-logo.png">
 </head>
 
 <body>
+    <header>
+        <left-column><a href="./index.html"><img class="logo-img" src="./bookList-logo.png"></a></left-column>
+        <right-column><button class="add-book"><a href="./add.html">+Add New</a></button></right-column>
+    </header>
 
+    <main>
+
+        <left-container>
+            <button class="sort-buttons" id="sortA-Z">Sort A-Z</button>
+            <button class="sort-buttons" id="sort-cybersecurity">Cybersecurity</button>
+            <button class="sort-buttons" id="sort-data">Data</button>
+            <button class="sort-buttons" id="sort-devops">DevOps</button>
+            <button class="sort-buttons" id="sort-leadership">Leadership</button>
+            <button class="sort-buttons" id="sort-product">Product Management</button>
+            <button class="sort-buttons" id="sort-software">Software Engineering</button>
+            <button class="sort-buttons" id="sort-ux">UX/UI</button>
+        </left-container>
+
+        <div class="book-container">
+            <h1>Recommended Books</h1>
+            <div id="book-gallery"></div>
+        </div>
+
+    </main>
+
+    <footer><button class="back-top"><a href="#top">Back to Top</a></button></footer>
+
+    <script src="../server/index.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,145 @@
+body {
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+header,
+.left-column,
+.right-column {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.logo-image {
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+}
+
+.add-book {
+    padding: 10px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    background-color: #090808;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.left-container {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 35px;
+}
+
+.sort-buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 5px;
+    letter-spacing: 2px;
+    margin-left: 35px;
+    margin-bottom: 10px;
+    background-color: #777B84;
+    color: #fff;
+}
+
+.sort-buttons:hover {
+    background-color: #090808;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Gallery styling
+grid display
+gallery images styling & hover? */
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.form-title {
+    margin-bottom: 25px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 23pt;
+}
+
+.add-book-form {
+    margin-bottom: 15px;
+}
+
+input,
+select,
+textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.submit-button {
+    background-color: #777B84;
+    color: #fff;
+    width: 145px;
+}
+
+.submit-button:hover {
+    background-color: #090808;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    height: 200px;
+    margin-top: 200px;
+}
+
+.back-main {
+    padding: 10px;
+    letter-spacing: 2px;
+    margin-left: 35px;
+    text-decoration: none;
+    background-color: #090808;
+    color: #fff;
+}
+
+.back-top {
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    padding: 10px;
+    letter-spacing: 2px;
+    margin-left: 35px;
+    text-decoration: none;
+    background-color: #090808;
+    color: #fff;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway&family=Source+Sans+Pro:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>Books To Read</title>
+    <link rel="icon" type="image" href="./bookList-logo.png">
+</head>
+
+<body>
+    <header>
+        <left-column><a href="./index.html"><img class="logo-img" src="./bookList-logo.png"></a></left-column>
+        <right-column><button class="back-main"><a href="./index.html">Back to Main</a></button></right-column>
+    </header>
+
+    <form class="add-book-form">
+        <div class="form-title">Add a New Book Recommendation!</div>
+        <input type="text" class="add-book-form" id="book-title" placeholder="Title">
+        <input type="text" class="add-book-form" id="book-author" placeholder="Author">
+        <input type="url" class="add-book-form" id="book-img" placeholder="Image URL">
+        <Select>
+            <option value="">Select a Category</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+            <option value="Data">Data</option>
+            <option value="DevOps">DevOps</option>
+            <option value="Leadership">Leadership</option>
+            <option value="Product Management">Product Management</option>
+            <option value="Software Engineering">Software Engineering</option>
+            <option value="UX/UI">UX/UI</option>
+        </Select>
+        <input type="text" multiline rows="50" cols="16" class="add-book-form" id="book-description"
+            placeholder="Short Text Description">
+        <input type="submit" value="Submit" class="submit-button">
+    </form>
+
+</body>
+
+</html>

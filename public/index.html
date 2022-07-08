@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="./index.css">
     <title>Books To Read</title>
     <link rel="icon" type="image" href="./bookList-logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+        integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -40,11 +43,17 @@
             <div id="book-gallery"></div>
         </div>
 
+        <div id="popup">
+            <h2 id="book-title"></h2>
+            <h3 id="book-author"></h3>
+            <p id="book-description"></p>
+        </div>
+
     </main>
 
     <footer><button class="back-top"><a href="#top">Back to Top</a></button></footer>
 
-    <script src="../server/index.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>

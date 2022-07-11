@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="./index.css">
     <title>Books To Read</title>
     <link rel="icon" type="image" href="./bookList-logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+        integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -22,26 +25,29 @@
         <right-column><button class="back-main"><a href="./index.html">Back to Main</a></button></right-column>
     </header>
 
-    <form class="add-book-form">
+    <form class="add-book-form" id="book-form" method="post">
         <div class="form-title">Add a New Book Recommendation!</div>
         <input type="text" class="add-book-form" id="book-title" placeholder="Title">
         <input type="text" class="add-book-form" id="book-author" placeholder="Author">
         <input type="url" class="add-book-form" id="book-img" placeholder="Image URL">
-        <Select>
-            <option value="">Select a Category</option>
-            <option value="Cybersecurity">Cybersecurity</option>
-            <option value="Data">Data</option>
-            <option value="DevOps">DevOps</option>
-            <option value="Leadership">Leadership</option>
-            <option value="Product Management">Product Management</option>
-            <option value="Software Engineering">Software Engineering</option>
-            <option value="UX/UI">UX/UI</option>
+
+        <label for="category">Select a Category:</label>
+        <Select id="book-category" name="category">
+            <option class="book-category" value="Cybersecurity">Cybersecurity</option>
+            <option class="book-category" value="Data">Data</option>
+            <option class="book-category" value="DevOps">DevOps</option>
+            <option class="book-category" value="Leadership">Leadership</option>
+            <option class="book-category" value="Product Management">Product Management</option>
+            <option class="book-category" value="Software Engineering">Software Engineering</option>
+            <option class="book-category" value="UX/UI">UX/UI</option>
         </Select>
-        <input type="text" multiline rows="50" cols="16" class="add-book-form" id="book-description"
+
+        <input type="text" multiline rows="50" cols="16" class="book-desc-text" id="book-description"
             placeholder="Short Text Description">
         <input type="submit" value="Submit" class="submit-button">
     </form>
 
+    <script src="./main.js"></script>
 </body>
 
 </html>

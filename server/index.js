@@ -16,7 +16,7 @@ app.get('/books', getAllBooks);
 
 app.get('/gallery', displayBooks);
 
-// app.post('/books', addBooks);
+app.post('/books', addBooks);
 
 app.post('/seed', seed);
 

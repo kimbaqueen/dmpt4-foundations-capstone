@@ -1,4 +1,3 @@
-
 const url = 'http://localhost:4003';
 
 const bookGallery = document.getElementById('book-gallery');
@@ -18,6 +17,7 @@ const uxuiCategory = document.getElementById('ux-ui');
 
 const bookForm = document.getElementById('book-form');
 
+
 function renderBooks(res) {
     for (let i = 0; i < res.data.length; i++) {
         const image = document.createElement('img');
@@ -28,7 +28,7 @@ function renderBooks(res) {
         // popup code - goal to display title, author, description in pop up window on click
         image.addEventListener('click', () => {
             popup.style.transform = `translateY(0)`;
-            // to disply in selectedBook div
+            // to display in selectedBook div
             // for (let j = 0; j < res.data.length; j++) {
             //     console.log("test");
             //     // *** 3 elements below aren't displaying as expected on my pop up ***
@@ -62,29 +62,24 @@ function displayBooks() {
 displayBooks();
 
 function getAllBooksByCategory(category) {
-    // console.log('filter books test');
     axios.get(`${url}/books?category=${category}`).then((res) => {
-        console.log(res);
         bookGallery.innerHTML = "";
 
         renderBooks(res);
     });
 };
 
+function sortAz() {
+    axios.get(`${url}/sortedBooks`).then((res) => {
+        bookGallery.innerHTML = "";
 
-// *** A-Z button sort *** needs help
-// replace with if statement true/false 2 event listeners
-// sortAlpha.addEventListener('click', () => {
-//     res.data[i].sort(function (a, b) {
-//         if (a.res.data[i].title.toLowerCase() < b.res.data[i].title.toLowerCase()) {
-//             return -1;
-//         } else if (a.res.data[i].title.toLowerCase() > b.res.data[i].title.toLowerCase()) {
-//             return 1;
-//         } else {
-//             return 0;
-//         }
-//     });
-// });
+        renderBooks(res);
+    });
+};
+
+sortAlpha.addEventListener('click', () => {
+    sortAz();
+});
 
 cybersecurityCategory.addEventListener('click', () => {
     getAllBooksByCategory('Cybersecurity');

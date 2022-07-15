@@ -12,8 +12,14 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 });
 
 module.exports = {
-    getAllBooks: (req, res) => {
-        sequelize.query(`SELECT * FROM books`).then((dbRes) => res.status(200).send(dbRes[0])).catch(err => console.log(error));
+    getAllBooksByCategory: (req, res) => {
+        const { category } = req.query;
+        if (category) {
+            sequelize.query(`SELECT * FROM books WHERE category='${category}'`).then((dbRes) => res.status(200).send(dbRes[0])).catch(error => console.log(error));
+        } else {
+            sequelize.query(`SELECT * FROM books`).then((dbRes) => res.status(200).send(dbRes[0])).catch(error => console.log(error));
+        }
+
     },
 
     displayBooks: (req, res) => {

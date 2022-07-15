@@ -121,6 +121,7 @@ main {
 
 .popup-title {
     color: #090808;
+    text-transform: uppercase;
 }
 
 .popup-author {

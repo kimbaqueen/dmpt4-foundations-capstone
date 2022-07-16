@@ -151,13 +151,22 @@ form {
 }
 
 input,
-select,
-textarea {
+select {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     margin-bottom: 15px;
+}
+
+.select-label {
+    text-align: left;
+}
+
+textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .submit-button {

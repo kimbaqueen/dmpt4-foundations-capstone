@@ -27,13 +27,19 @@ module.exports = {
 
     // ***** help with the add book app.post function & get it to pull from the form data entered ****
     addBooks: (req, res) => {
+        const { title, author, category, image_url, short_description } = req.body;
+        console.log(req.body);
         sequelize.query(`
-            INSERT INTO books ('title', 'author', 'category', 'image_url', 'short_description')
-            VALUES ${title}, ${author}, ${category}, ${image_url}, ${short_description}`).then((dbRes) => res.status(200)).send((dbRes[0])).catch(error => console.log(error));
+            INSERT INTO books (title, author, category, image_url, short_description)
+            VALUES ('${title}', '${author}', '${category}', '${image_url}', '${short_description}')`).then(() => res.sendStatus(200)).catch(error => console.log(error));
     },
 
     sortAz: (req, res) => {
         sequelize.query(`SELECT * FROM books ORDER BY title ASC`).then((dbRes) => res.status(200).send(dbRes[0])).catch(error => console.log(error));
+    },
+
+    sortZa: (req, res) => {
+        sequelize.query(`SELECT * FROM books ORDER BY title DESC`).then((dbRes) => res.status(200).send(dbRes[0])).catch(error => console.log(error));
     }
 }
 

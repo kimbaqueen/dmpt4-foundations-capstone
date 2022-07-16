@@ -4,7 +4,7 @@ const app = express();
 const cors = require('cors');
 const { SERVER_PORT } = process.env;
 const { seed } = require('./seed.js');
-const { displayBooks, addBooks, getAllBooksByCategory, sortAz } = require('./controller.js');
+const { displayBooks, addBooks, getAllBooksByCategory, sortAz, sortZa } = require('./controller.js');
 
 
 app.use(express.json());
@@ -18,7 +18,9 @@ app.get('/gallery', displayBooks);
 
 app.get('/sortedBooks', sortAz);
 
-app.post('/add-books', addBooks);
+app.get('/descBooks', sortZa);
+
+app.post('/gallery', addBooks);
 
 app.post('/seed', seed);
 

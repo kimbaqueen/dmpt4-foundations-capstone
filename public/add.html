@@ -25,13 +25,13 @@
         <right-column><button class="back-main"><a href="./index.html">Back to Main</a></button></right-column>
     </header>
 
-    <form class="add-book-form" id="book-form" method="post">
+    <form class="add-book-form" id="book-form">
         <div class="form-title">Add a New Book Recommendation!</div>
         <input type="text" class="add-book-form" id="book-title" placeholder="Title">
         <input type="text" class="add-book-form" id="book-author" placeholder="Author">
         <input type="url" class="add-book-form" id="book-img" placeholder="Image URL">
 
-        <label for="category">Select a Category:</label>
+        <label for="category" class="select-label">Select a Category:</label>
         <Select id="book-category" name="category">
             <option class="book-category" value="Cybersecurity">Cybersecurity</option>
             <option class="book-category" value="Data">Data</option>
@@ -47,7 +47,7 @@
         <input type="submit" value="Submit" class="submit-button">
     </form>
 
-    <script src="./main.js"></script>
+    <script src="./add.js"></script>
 </body>
 
 </html>

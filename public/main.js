@@ -15,7 +15,6 @@ const softwareCategory = document.getElementById('software');
 const uxuiCategory = document.getElementById('ux-ui');
 
 
-const bookForm = document.getElementById('book-form');
 
 
 function renderBooks(res) {
@@ -28,22 +27,26 @@ function renderBooks(res) {
         // popup code - goal to display title, author, description in pop up window on click
         image.addEventListener('click', () => {
             popup.style.transform = `translateY(0)`;
-            // to display in selectedBook div
-            // for (let j = 0; j < res.data.length; j++) {
-            //     console.log("test");
-            //     // *** 3 elements below aren't displaying as expected on my pop up ***
-            //     const popupTitle = document.createElement('div');
-            //     popupTitle.innerText = res.data[j].title;
-            //     popupTitle.classList.add('popup-title');
 
-            //     const popupAuthor = document.createElement('div');
-            //     popupAuthor.innerText = res.data[j].author;
-            //     popupAuthor.classList.add('popup-author');
+            const popupTitle = document.createElement('div');
+            popupTitle.innerText = 'test title';
+            popupTitle.classList.add('popup-title');
 
-            //     const popupDescription = document.createElement('div');
-            //     popupDescription.innerText = res.data[j].short_description;
-            //     popupDescription.classList.add('popup-description');
-            // };
+            const popupAuthor = document.createElement('div');
+            popupAuthor.innerText = 'test author';
+            popupAuthor.classList.add('popup-author');
+
+            const popupDescription = document.createElement('div');
+            popupDescription.innerText = 'test description';
+            popupDescription.classList.add('popup-description');
+
+            popup.appendChild(popupTitle);
+            popup.appendChild(popupAuthor);
+            popup.appendChild(popupDescription);
+
+
+            // *** 3 elements below aren't displaying as expected on my pop up ***
+
         });
         bookGallery.appendChild(image);
     };
@@ -77,8 +80,20 @@ function sortAz() {
     });
 };
 
+function sortZa() {
+    axios.get(`${url}/descBooks`).then((res) => {
+        bookGallery.innerHTML = "";
+
+        renderBooks(res);
+    });
+};
+
 sortAlpha.addEventListener('click', () => {
     sortAz();
+});
+
+sortAlpha.addEventListener('dblclick', () => {
+    sortZa();
 });
 
 cybersecurityCategory.addEventListener('click', () => {
@@ -110,20 +125,3 @@ uxuiCategory.addEventListener('click', () => {
 });
 
 
-
-
-
-// **** 2nd view ---- Add.html ---- post form data to database*****
-
-// bookForm.addEventListener('submit', function (event) {
-//     event.preventDefault();
-
-//     let bookTitle = document.getElementById('book-title').value;
-//     let bookAuthor = document.getElementById('book-author').value;
-//     let bookImg = document.getElementById('book-img').value;
-//     let bookCategory = document.querySelector('#book-category').value;
-//     let bookDescription = document.getElementById('book-description').value;
-
-//     // how to get this front end to connect with backend and post values to my database?
-
-// });

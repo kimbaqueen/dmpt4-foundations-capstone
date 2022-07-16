@@ -14,48 +14,6 @@ const productCategory = document.getElementById('product');
 const softwareCategory = document.getElementById('software');
 const uxuiCategory = document.getElementById('ux-ui');
 
-
-
-
-function renderBooks(res) {
-    for (let i = 0; i < res.data.length; i++) {
-        const image = document.createElement('img');
-        image.src = res.data[i].image_url;
-        image.alt = res.data[i].title;
-        image.classList.add('bookGalleryImg');
-
-        // popup code - goal to display title, author, description in pop up window on click
-        image.addEventListener('click', () => {
-            popup.style.transform = `translateY(0)`;
-
-            const popupTitle = document.createElement('div');
-            popupTitle.innerText = 'test title';
-            popupTitle.classList.add('popup-title');
-
-            const popupAuthor = document.createElement('div');
-            popupAuthor.innerText = 'test author';
-            popupAuthor.classList.add('popup-author');
-
-            const popupDescription = document.createElement('div');
-            popupDescription.innerText = 'test description';
-            popupDescription.classList.add('popup-description');
-
-            popup.appendChild(popupTitle);
-            popup.appendChild(popupAuthor);
-            popup.appendChild(popupDescription);
-
-
-            // *** 3 elements below aren't displaying as expected on my pop up ***
-
-        });
-        bookGallery.appendChild(image);
-    };
-
-    popup.addEventListener('click', () => {
-        popup.style.transform = `translateY(-100%)`;
-    });
-};
-
 function displayBooks() {
     axios.get(`${url}/gallery`).then((res) => {
         renderBooks(res);
@@ -64,10 +22,48 @@ function displayBooks() {
 
 displayBooks();
 
+function renderBooks(res) {
+    for (let i = 0; i < res.data.length; i++) {
+        const image = document.createElement('img');
+        image.src = res.data[i].image_url;
+        image.alt = res.data[i].title;
+        image.classList.add('bookGalleryImg');
+
+        image.addEventListener('click', () => {
+            popup.style.transform = `translateY(0)`;
+            renderPopupContents();
+        });
+        bookGallery.appendChild(image);
+    };
+
+    popup.addEventListener('click', () => {
+        selectedBook.innerText = "";
+        popup.style.transform = `translateY(-100%)`;
+    });
+};
+
+// ***** insert selected book data from table to display as inner text for the function below ****
+function renderPopupContents() {
+    const popupTitle = document.createElement('div');
+    popupTitle.innerText = 'test title';
+    popupTitle.classList.add('popup-title');
+
+    const popupAuthor = document.createElement('div');
+    popupAuthor.innerText = 'test author';
+    popupAuthor.classList.add('popup-author');
+
+    const popupDescription = document.createElement('div');
+    popupDescription.innerText = 'test description';
+    popupDescription.classList.add('popup-description');
+
+    selectedBook.appendChild(popupTitle);
+    selectedBook.appendChild(popupAuthor);
+    selectedBook.appendChild(popupDescription);
+};
+
 function getAllBooksByCategory(category) {
     axios.get(`${url}/books?category=${category}`).then((res) => {
         bookGallery.innerHTML = "";
-
         renderBooks(res);
     });
 };
@@ -75,7 +71,6 @@ function getAllBooksByCategory(category) {
 function sortAz() {
     axios.get(`${url}/sortedBooks`).then((res) => {
         bookGallery.innerHTML = "";
-
         renderBooks(res);
     });
 };
@@ -83,7 +78,6 @@ function sortAz() {
 function sortZa() {
     axios.get(`${url}/descBooks`).then((res) => {
         bookGallery.innerHTML = "";
-
         renderBooks(res);
     });
 };
@@ -92,8 +86,8 @@ sortAlpha.addEventListener('click', () => {
     sortAz();
 });
 
-sortAlpha.addEventListener('dblclick', () => {
-    sortZa();
+sortAlpha.addEventListener('dblclick', (event) => {
+    sortZa(event);
 });
 
 cybersecurityCategory.addEventListener('click', () => {
@@ -123,5 +117,3 @@ softwareCategory.addEventListener('click', () => {
 uxuiCategory.addEventListener('click', () => {
     getAllBooksByCategory('UX/UI');
 });
-
-

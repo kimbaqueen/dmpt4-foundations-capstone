@@ -123,6 +123,7 @@ main {
     justify-content: center;
     align-items: left;
     flex-direction: column;
+    max-width: 30%;
     padding: 40px;
 }
 
@@ -132,7 +133,7 @@ main {
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 
 /* might need some refinement once we get the data coming through */
@@ -140,7 +141,7 @@ main {
     color: #090808;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.5rem;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 /* might need some refinement once we get the data coming through */
@@ -148,6 +149,7 @@ main {
     color: #090808;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
+    margin-right: 20px;
 }
 
 form {

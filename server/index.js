@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const path = require('path');
-const { SERVER_PORT } = process.env.PORT || 4003;
+const { SERVER_PORT } = process.env;
 const { seed } = require('./seed.js');
 const { displayBooks, addBooks, getAllBooksByCategory, sortAz, sortZa } = require('./controller.js');
 

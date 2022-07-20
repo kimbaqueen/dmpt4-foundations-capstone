@@ -25,7 +25,6 @@ module.exports = {
         sequelize.query(`SELECT image_url, title, author, short_description FROM books`).then((dbRes) => res.status(200).send(dbRes[0])).catch(error => console.log(error));
     },
 
-    // ***** help with the add book app.post function & get it to pull from the form data entered ****
     addBooks: (req, res) => {
         const { title, author, category, image_url, short_description } = req.body;
         console.log(req.body);

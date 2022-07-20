@@ -45,7 +45,7 @@ function renderBooks(res) {
 };
 
 // ***** insert selected book data from table to display as inner text for the function below ****
-// create a function? that pulls selected image book info from database (singular)
+// create a function? that pulls selected image - book info - from database (singular)
 // Then maybe need to pass this new function into the renderPopupContents invoked function around line 35?
 // to get it to insert image info into the innerText lines of renderPopupContents function?
 // res.data.title ... res.data.author... res.data.short_description

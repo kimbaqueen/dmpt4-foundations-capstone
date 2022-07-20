@@ -1,5 +1,6 @@
 const url = 'http://localhost:4003';
 const bookForm = document.getElementById('book-form');
+const inputs = document.querySelectorAll('#book-title, #book-author, #book-img, #book-category, #book-description');
 
 function addToGallery(book) {
     axios.post(`${url}/gallery`, book).then((res) => {
@@ -19,4 +20,10 @@ bookForm.addEventListener('submit', function (event) {
     };
 
     addToGallery(book);
+
+    alert("Book Submitted!");
+
+    inputs.forEach(input => {
+        input.value = '';
+    });
 });

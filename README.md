@@ -3,7 +3,7 @@
 
 Welcome to my DevMountain Foundations Capstone! 
 
-For my project, I created an app that organizes industry book recommendations. User is able to filter recommended books by category and also add new books to the recommended list as features. 
+For my project, I created an app that organizes industry book recommendations. Feature capabilities permit user to filter recommended books by category and sort A-Z. Another feature allows user to add new books to the recommended list, which notifies user upon success and auto clears the submission form.
 
 # Tech Stack
 
@@ -15,6 +15,6 @@ For my database, I wanted to keep it simple yet effective. Using SQL for the dat
 
 I did run into some challenges in coding some of the loop functions on the sort A-Z feature. I found myself overcomplicating the code with Javascript, but found an alternative DRY method using Sequelize instead. When I understood the logic behind it and how effective it was, that was a major win. 
 
-The most interesting part for me was when the database was connected with my front end. That was such a game changer for me to visually see the code doing what it's supposed to do, and getting to finally stylize it! There was complexity in this because of the additional backend and server connections that were needed, but the payoff was worth it!
+The most interesting part for me was when the database was connected with my front end. That was such a game changer for me to visually see the code doing what it's supposed to do, and getting to finally stylize it! There was complexity in this because of the additional backend and server connections that were needed, but the payoff was worth it! I was also able to research and find a quick way to auto clear the submit form and notify the user when successfully submitting a new entry to bookList. 
 
 I learned so much during foundations at DevMountain and I'm so excited to continue onto Specializations to learn more on Data Analytics and add to my skill set!

@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const path = require('path');
 const { SERVER_PORT } = process.env;
 const { seed } = require('./seed.js');
 const { displayBooks, addBooks, getAllBooksByCategory, sortAz, sortZa } = require('./controller.js');
@@ -9,6 +10,9 @@ const { displayBooks, addBooks, getAllBooksByCategory, sortAz, sortZa } = requir
 app.use(express.json());
 app.use(cors());
 
+app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, '../public'));
+});
 
 app.get('/books', getAllBooksByCategory);
 

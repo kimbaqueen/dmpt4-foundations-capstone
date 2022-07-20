@@ -115,7 +115,6 @@ main {
     padding: 50px;
 }
 
-/* might need some refinement once we get the data coming through */
 #selected-book {
     max-height: 100%;
     background-color: #fff;
@@ -127,28 +126,25 @@ main {
     padding: 40px;
 }
 
-/* might need some refinement once we get the data coming through */
 .popup-title {
     color: #090808;
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 28pt;
     margin-bottom: 2px;
 }
 
-/* might need some refinement once we get the data coming through */
 .popup-author {
     color: #090808;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.5rem;
+    font-size: 24pt;
     margin-bottom: 15px;
 }
 
-/* might need some refinement once we get the data coming through */
 .popup-description {
     color: #090808;
     font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
+    font-size: 18pt;
     margin-right: 20px;
 }
 
@@ -221,7 +217,7 @@ footer {
 }
 
 .jump-bottom {
-    padding: 2px;
+    padding: 8px;
     letter-spacing: 2px;
     margin-top: 50px;
     margin-left: 35px;
@@ -249,12 +245,3 @@ footer {
     background-color: rgba(0, 0, 0, 0.15);
     color: black;
 }
-
-/* form text box input styling needs work */
-
-/* .book-desc-text {
-    margin: 10px 0;
-    padding: 20px;
-    background-color: #fff;
-    font-size: 16px;
-} */

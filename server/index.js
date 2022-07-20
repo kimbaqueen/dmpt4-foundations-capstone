@@ -6,10 +6,8 @@ const { SERVER_PORT } = process.env;
 const { seed } = require('./seed.js');
 const { displayBooks, addBooks, getAllBooksByCategory, sortAz, sortZa } = require('./controller.js');
 
-
 app.use(express.json());
 app.use(cors());
-
 
 
 app.get('/books', getAllBooksByCategory);

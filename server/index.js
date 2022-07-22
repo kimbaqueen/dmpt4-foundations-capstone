@@ -3,7 +3,8 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const path = require('path');
-const { SERVER_PORT } = process.env;
+// const { SERVER_PORT } = process.env;
+const port = process.env.PORT || 4003;
 const { seed } = require('./seed.js');
 const { displayBooks, addBooks, getAllBooksByCategory, sortAz, sortZa } = require('./controller.js');
 
@@ -24,4 +25,6 @@ app.post('/gallery', addBooks);
 
 app.post('/seed', seed);
 
-app.listen(SERVER_PORT, () => console.log(`We listening up on ${SERVER_PORT}`));
+// app.listen(SERVER_PORT, () => console.log(`We listening up on ${SERVER_PORT}`));
+
+app.listen(port, () => console.log(`We vibing on port ${port}`));

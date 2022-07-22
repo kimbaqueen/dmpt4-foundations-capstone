@@ -30,8 +30,8 @@
         <input type="text" class="add-book-form" id="book-title" placeholder="Title">
         <input type="text" class="add-book-form" id="book-author" placeholder="Author">
         <input type="url" class="add-book-form" id="book-img" placeholder="Image URL">
-
-        <label for="category" class="select-label">Select a Category:</label>
+        <textarea class="book-desc-text" id="book-description" placeholder=" Short Book Description"></textarea>
+        <label for="category" class="select-label" id="select-label">Select a Category:</label>
         <Select id="book-category" name="category">
             <option class="book-category" value="Cybersecurity">Cybersecurity</option>
             <option class="book-category" value="Data">Data</option>
@@ -41,7 +41,6 @@
             <option class="book-category" value="Software Engineering">Software Engineering</option>
             <option class="book-category" value="UX/UI">UX/UI</option>
         </Select>
-        <textarea class="book-desc-text" id="book-description" placeholder=" Short Book Description"></textarea>
         <input type="submit" value="Submit" class="submit-button">
     </form>
 
